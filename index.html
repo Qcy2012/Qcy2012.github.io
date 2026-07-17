@@ -4,8 +4,15 @@
   <head>
     <style>
       .container{
-        display: flex;
-        align-items: flex-end;
+        position: relative;
+        height: 500px;
+        border: 1px solid #000;
+      }
+      .bottom-text{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          text-align: center;
       }
     </style>
     <title>Qcy's Blog</title>
@@ -16,10 +23,14 @@
     </div>
     <h1 style="text-align:center;">Qcy's Blog<br><br></h1>
     <div class="container">
-      <p style="text-align:center;">该网站正处于测试阶段。<br></p>
+      <div class="bottom-text">
+        <p style="text-align:center;">该网站正处于测试阶段。<br></p>
+      </div>
     </div>
     <div class="container">
-      <p style="text-align:center;">建站于2026-7-17<br></p>
+      <div class="bottom-text">
+        <p style="text-align:center;">建站于2026-7-17<br></p>
+      </div>
     </div>
   </body>
 </html>
