@@ -1454,7 +1454,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #3c1cc1;
+    background: #ff210e;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2704,9 +2704,6 @@ ul.breadcrumb li:last-child {
   .gt-container .gt-header-textarea {
     background-color: light-dark(#f6f6f6, var(--card-bg-color-dark)) !important;
   }
-}
-.utterances {
-  max-width: unset;
 }
 mark.search-keyword {
   background: transparent;
