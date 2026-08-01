@@ -257,7 +257,10 @@
     <a href="/2026/07/30/1-Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" rel="prev" title="1-Markdown学习笔记">
       <i class="fa fa-chevron-left"></i> 1-Markdown学习笔记
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2026/07/31/3-/" rel="next" title="3-">
+      3- <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -270,6 +273,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -332,7 +336,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">2</span>
+          <span class="site-state-item-count">3</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -441,6 +445,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : 'Ov23liLYvFHYLazJDboq',
+      clientSecret: 'e8a0ffa7ad484d29727b02a1265f4c39f6df5ddc',
+      repo        : 'Qcy2012.github.io',
+      owner       : 'Qcy2012',
+      admin       : ['Qcy2012'],
+      id          : 'f584a7b0ad79c0981ab7e3ea9ad40d48',
+        language: 'zh-CN',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
