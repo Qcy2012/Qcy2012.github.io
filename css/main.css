@@ -1454,7 +1454,7 @@ pre code {
     vertical-align: middle;
   }
   .links-of-author a::before {
-    background: #ff7e0a;
+    background: #fffff1;
     display: inline-block;
     margin-right: 3px;
     transform: translateY(-2px);
@@ -2686,9 +2686,6 @@ ul.breadcrumb li:last-child {
     border-bottom-color: light-dark(#111, #eee);
     color: light-dark(#111, #eee);
   }
-}
-.utterances {
-  max-width: unset;
 }
 mark.search-keyword {
   background: transparent;
