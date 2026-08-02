@@ -277,22 +277,8 @@
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
-{%- if page.comments %}
-<script>
-NexT.utils.loadComments(document.querySelector('#utterances-container'), () => {
-    // if (typeof parcelRequire === 'function') { return; }
-    var js = document.createElement('script');
-    js.type = 'text/javascript';
-    js.src = 'https://utteranc.es/client.js';
-    js.async = true;
-    js.crossorigin = 'anonymous';
-    js.setAttribute('repo', '{{ theme.utterances.repo }}');
-    js.setAttribute('issue-term', '{{ theme.utterances.issue_term }}');
-    js.setAttribute('theme', '{{ theme.utterances.theme }}');
-    document.getElementById('utterances-container').appendChild(js);
-});
-</script>
-{%- endif %}
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"Qcy2012/Qcy2012.github.io","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
 
 </body>
 </html>
