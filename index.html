@@ -329,7 +329,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-02 15:43:27" itemprop="dateModified" datetime="2026-08-02T15:43:27+08:00">2026-08-02</time>
+      <time title="修改时间：2026-08-02 16:39:02" itemprop="dateModified" datetime="2026-08-02T16:39:02+08:00">2026-08-02</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -363,7 +363,7 @@
 <li><em>1&lt;&#x3D;b&lt;&#x3D;m;</em></li>
 <li><em>a+b&#x3D;k*b*gcd(a,b)</em></li>
 </ol>
-<p>因为 <em>a+b&#x3D;k*b*gcd(a,b)</em> , <em>a+b&#x3D;k倍的b*gcd(a,b)</em> ;<br>最后总结出公式： <em>a+b&#x3D;k*b<sup>2</sup></em>,即 <em>(a+b)%(b*b)&#x3D;&#x3D;0</em><br>警告：循环一定要开<em>long long</em>！！！  </p>
+<p>首先证明 <em>a</em> 一定是 <em>b</em> 的倍数：<br>证明：<br>因为 <em>a+b&#x3D;k*b*gcd(a,b)</em> , <em>a+b</em>是<em>b*gcd(a,b)</em> 的倍数, <em>a</em> 是 <em>b</em> 的 <em>(gcd(a,b)-1)</em> 倍,又因为 <em>a&gt;&#x3D;1,b&gt;&#x3D;1</em> ,所以 <em>gcd(a,b)-1!&#x3D;0</em> 。<br>因为 <em>a</em> 是 <em>b</em> 的 <em>(gcd(a,b)-1)</em> 倍且 <em>(gcd(a,b)-1)</em> 为自然数,所以 <em>a</em> 一定是 <em>b</em> 的倍数。<br>证明完毕。<br>最后总结出公式： <em>a+b&#x3D;k*b<sup>2</sup></em>,即 <em>(a+b)%(b*b)&#x3D;&#x3D;0</em> ,这道题就迎刃而解了。<br>警告：循环一定要开<em>long long</em>！！！  </p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> T,n,m,ans; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); <span class="comment">//快读快写</span></span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	cin &gt;&gt; T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		ans=<span class="number">0</span>;</span><br><span class="line">		cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123; <span class="comment">//b</span></span><br><span class="line">			<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> j=i;j&lt;=n;j+=i)&#123; <span class="comment">//a是b的倍数,j+=i</span></span><br><span class="line">				<span class="keyword">if</span>((i+j)%(i*i)==<span class="number">0</span>) ans++; <span class="comment">//利用总结出来的公式</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>; <span class="comment">//输出</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="T2-矩阵行列交换"><a href="#T2-矩阵行列交换" class="headerlink" title="T2 矩阵行列交换"></a>T2 矩阵行列交换</h3><p><a target="_blank" rel="noopener" href="https://newoj.daimayuan.top/p/5299?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：  </p>
@@ -371,6 +371,12 @@
 
 <h3 id="T3-石子游戏"><a href="#T3-石子游戏" class="headerlink" title="T3 石子游戏"></a>T3 石子游戏</h3><p><a target="_blank" rel="noopener" href="https://newoj.daimayuan.top/p/5300?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：  </p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="T4-二进制砝码组合"><a href="#T4-二进制砝码组合" class="headerlink" title="T4 二进制砝码组合"></a>T4 二进制砝码组合</h3><p><a target="_blank" rel="noopener" href="https://newoj.daimayuan.top/p/5301?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：  </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为-long-long-开成了-int-遗憾失分。也希望看到这篇文章的读者不要忘了开-long-long！！！"><a href="#结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为-long-long-开成了-int-遗憾失分。也希望看到这篇文章的读者不要忘了开-long-long！！！" class="headerlink" title="结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为 long long 开成了 int ,遗憾失分。也希望看到这篇文章的读者不要忘了开 long long！！！"></a>结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为 <em>long long</em> 开成了 <em>int</em> ,遗憾失分。也希望看到这篇文章的读者不要忘了开 <em>long long</em>！！！</h3>
       
     </div>
 
