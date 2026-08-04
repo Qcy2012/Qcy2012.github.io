@@ -23,11 +23,11 @@
 }
 
 .sliding-spoiler.collapsed .sliding-spoiler-title:before {
-    content: "Show:  ";
+    content: "Show ";
 }
 
 .sliding-spoiler.expanded .sliding-spoiler-title:before {
-    content: "Hide:  ";
+    content: "Hide ";
 }
 
 .sliding-spoiler .sliding-spoiler-content {
