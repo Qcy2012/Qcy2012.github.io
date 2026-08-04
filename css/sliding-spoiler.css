@@ -23,11 +23,11 @@
 }
 
 .sliding-spoiler.collapsed .sliding-spoiler-title:before {
-    content: "显示折叠内容 ";
+    content: " ";
 }
 
 .sliding-spoiler.expanded .sliding-spoiler-title:before {
-    content: "隐藏折叠内容 ";
+    content: " ";
 }
 
 .sliding-spoiler .sliding-spoiler-content {
