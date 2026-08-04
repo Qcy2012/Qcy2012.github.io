@@ -98,7 +98,7 @@ p.spoiler {
   color: black;
   background-color: black;
   text-shadow: none;
-}</style><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}</style></head>
+}</style><style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}</style><link rel="stylesheet" href="/css/sliding-spoiler.css" type="text/css"></head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
   <div class="headband"></div>
@@ -247,7 +247,7 @@ p.spoiler {
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2026-08-04 00:00:00 / 修改时间：18:33:15" itemprop="dateCreated datePublished" datetime="2026-08-04T00:00:00+08:00">2026-08-04</time>
+      <time title="创建时间：2026-08-04 00:00:00 / 修改时间：18:35:07" itemprop="dateCreated datePublished" datetime="2026-08-04T00:00:00+08:00">2026-08-04</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -283,7 +283,14 @@ p.spoiler {
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Hexo折叠框测试"><a href="#Hexo折叠框测试" class="headerlink" title="Hexo折叠框测试"></a>Hexo折叠框测试</h1><p>[% spoiler “ :空空如也” %]<br>    # 空空如也<br>[% endspoiler %]</p>
+          <h1 id="Hexo折叠框测试"><a href="#Hexo折叠框测试" class="headerlink" title="Hexo折叠框测试"></a>Hexo折叠框测试</h1><div class='sliding-spoiler collapsed'>
+    <div class='sliding-spoiler-title'>
+        :空空如也
+    </div>
+    <div class='sliding-spoiler-content'>
+        <h1 id="空空如也"><a href="#空空如也" class="headerlink" title="空空如也"></a>空空如也</h1>
+    </div>
+</div>
 
       
     </div>
@@ -813,5 +820,5 @@ document.addEventListener('page:loaded', () => {
 });
 </script>
 
-</body>
+<script src="/js/sliding-spoiler.js" type="text/javascript"></script></body>
 </html>
