@@ -1,6 +1,76 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>3-代码源C队模拟赛2026-8-2赛后总结</title>
+    <url>/2026/08/02/3-%E4%BB%A3%E7%A0%81%E6%BA%90C%E9%98%9F%E6%A8%A1%E6%8B%9F%E8%B5%9B2026-8-2%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<h1 id="2026-8-2代码源C队模拟赛-3赛后总结"><a href="#2026-8-2代码源C队模拟赛-3赛后总结" class="headerlink" title="2026-8-2代码源C队模拟赛-3赛后总结"></a>2026-8-2代码源C队模拟赛-3赛后总结</h1><p><del><em>别问我标题为什么是C队模拟赛-3</em></del>  </p>
+<h2 id="比赛概述-难点分析："><a href="#比赛概述-难点分析：" class="headerlink" title="比赛概述+难点分析："></a>比赛概述+难点分析：</h2><ol>
+<li>本场比赛共4道题,时长共4小时。</li>
+<li>比赛为OI赛制（比赛中看不到分数和排名）</li>
+<li>T1,T3较简单,</li>
+</ol>
+<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="T1-双面编号牌"><a href="#T1-双面编号牌" class="headerlink" title="T1 双面编号牌"></a>T1 双面编号牌</h3><p><a href="https://newoj.daimayuan.top/p/5298?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：<br>题目条件：  </p>
+<ol>
+<li><em>1&lt;&#x3D;a&lt;&#x3D;n;</em></li>
+<li><em>1&lt;&#x3D;b&lt;&#x3D;m;</em></li>
+<li><em>a+b&#x3D;k*b*gcd(a,b)</em></li>
+</ol>
+<p>首先证明 <em>a</em> 一定是 <em>b</em> 的倍数：<br>证明：<br>因为 <em>a+b&#x3D;k*b*gcd(a,b)</em> , <em>a+b</em>是<em>b*gcd(a,b)</em> 的倍数, <em>a</em> 是 <em>b</em> 的 <em>(gcd(a,b)-1)</em> 倍,又因为 <em>a&gt;&#x3D;1,b&gt;&#x3D;1</em> ,所以 <em>gcd(a,b)-1!&#x3D;0</em> 。<br>因为 <em>a</em> 是 <em>b</em> 的 <em>(gcd(a,b)-1)</em> 倍且 <em>(gcd(a,b)-1)</em> 为自然数,所以 <em>a</em> 一定是 <em>b</em> 的倍数。<br>证明完毕。<br>最后总结出公式： <em>a+b&#x3D;k*b<sup>2</sup></em>,即 <em>(a+b)%(b*b)&#x3D;&#x3D;0</em> ,这道题就迎刃而解了。<br>警告：循环一定要开<em>long long</em>！！！  </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> T,n,m,ans; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); <span class="comment">//快读快写</span></span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	cin &gt;&gt; T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		ans=<span class="number">0</span>;</span><br><span class="line">		cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123; <span class="comment">//b</span></span><br><span class="line">			<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> j=i;j&lt;=n;j+=i)&#123; <span class="comment">//a是b的倍数,j+=i</span></span><br><span class="line">				<span class="keyword">if</span>((i+j)%(i*i)==<span class="number">0</span>) ans++; <span class="comment">//利用总结出来的公式</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>; <span class="comment">//输出</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="T2-矩阵行列交换"><a href="#T2-矩阵行列交换" class="headerlink" title="T2 矩阵行列交换"></a>T2 矩阵行列交换</h3><p><a href="https://newoj.daimayuan.top/p/5299?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：  </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="T3-石子游戏"><a href="#T3-石子游戏" class="headerlink" title="T3 石子游戏"></a>T3 石子游戏</h3><p><a href="https://newoj.daimayuan.top/p/5300?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：  </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="T4-二进制砝码组合"><a href="#T4-二进制砝码组合" class="headerlink" title="T4 二进制砝码组合"></a>T4 二进制砝码组合</h3><p><a href="https://newoj.daimayuan.top/p/5301?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：  </p>
+<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<hr>
+<h3 id="结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为-long-long-开成了-int-遗憾失分。也希望看到这篇文章的读者不要忘了开-long-long！！！"><a href="#结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为-long-long-开成了-int-遗憾失分。也希望看到这篇文章的读者不要忘了开-long-long！！！" class="headerlink" title="结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为 long long 开成了 int ,遗憾失分。也希望看到这篇文章的读者不要忘了开 long long！！！"></a>结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为 <em>long long</em> 开成了 <em>int</em> ,遗憾失分。也希望看到这篇文章的读者不要忘了开 <em>long long</em>！！！</h3><link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>学习</category>
+      </categories>
+      <tags>
+        <tag>赛后总结</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>4-吐槽Cloudflare人机验证和Codeforces服务器炸了的问题</title>
+    <url>/2026/08/03/4-%E5%90%90%E6%A7%BDCloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%92%8CCodeforces%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%82%B8%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<h1 id="先说Cloudflare人机验证"><a href="#先说Cloudflare人机验证" class="headerlink" title="先说Cloudflare人机验证"></a>先说Cloudflare人机验证</h1><h2 id="你是否在访问某些网站或提交代码时人机验证失败，很崩溃？"><a href="#你是否在访问某些网站或提交代码时人机验证失败，很崩溃？" class="headerlink" title="你是否在访问某些网站或提交代码时人机验证失败，很崩溃？"></a>你是否在访问某些网站或提交代码时人机验证失败，很崩溃？</h2><p><del><em>没关系，我跟你一样讨厌人机验证</em></del></p>
+<p>有时在比赛或需要时效性的事情中，这件事就变得特别棘手。有时几分钟可以做完的事情，却因为人机验证而卡了几个小时。  </p>
+<h3 id="Cloudflare人机验证本来的目的"><a href="#Cloudflare人机验证本来的目的" class="headerlink" title="Cloudflare人机验证本来的目的"></a>Cloudflare人机验证本来的目的</h3><p>Cloudflare人机验证本来的目的是为了防止自动程序、机器人或爬虫入侵网站，保证网站、用户信息的安全。</p>
+<p>这么做当然没错，做得好我还会称赞。</p>
+<h3 id="但是！"><a href="#但是！" class="headerlink" title="但是！"></a>但是！</h3><p>现在的情况好像正好相反：不停循环验证还失败，不知道有没有保证安全，反正用户体验是拉爆了。</p>
+<p>作者亲身经历：2026-8-4晚上作者提交CodeForces的题目，在人机验证阶段卡了一个半小时。</p>
+<h3 id="吐槽完了，有什么解决方法吗？"><a href="#吐槽完了，有什么解决方法吗？" class="headerlink" title="吐槽完了，有什么解决方法吗？"></a>吐槽完了，有什么解决方法吗？</h3><p>有还是有的。</p>
+<p><small><small>注：以下部分结果来源于网络，信息可能不准确，仅供参考</small></small></p>
+<ul>
+<li>换个网络：可以连接手机热点，或其他网络，保证网络信号好</li>
+<li>休息一下，不要太频繁地操作，这让容易让人机验证机制将你判定为人机或自动程序。</li>
+<li>检查浏览器兼容性并清除缓存或重启浏览器，浏览器运行时间过长可能产生很多缓存，影响浏览器和设备性能。</li>
+<li>清除DNS解析缓存:<br>  打开 <em>Windows PowerShell</em> ,输入以下命令并回车执行：  <figure class="highlight cmd"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure></li>
+<li>同步系统时间：<br>  按 <em>Win+I</em> 快捷键打开 <em>Windows 设置</em> ,找到 <em>时间和语言-&gt;日期和时间-&gt;其他设置-&gt;立即同步</em> ,点击右侧 <em>立即同步</em> 按钮,等待同步完成。如果同步失败,多试几次。</li>
+</ul>
+<hr>
+<h1 id="再说CodeForces的土豆服务器"><a href="#再说CodeForces的土豆服务器" class="headerlink" title="再说CodeForces的土豆服务器"></a>再说CodeForces的土豆服务器</h1><h2 id="被土豆服务器困扰也很让人崩溃"><a href="#被土豆服务器困扰也很让人崩溃" class="headerlink" title="被土豆服务器困扰也很让人崩溃"></a>被土豆服务器困扰也很让人崩溃</h2><p><del><em>感觉服务器像土豆地雷，你只知道它会炸，但永远不知道它什么时候会炸</em></del></p>
+<p>土豆服务器爆炸日志：</p>
+<ul>
+<li>2026-8-2 13:00 左右，整个网站炸掉了，主页也进不去</li>
+<li>2026-8-4 20:30 评测机爆炸了，提交上去一直是In queue，到 2026-8-5 8:30 左右才好</li>
+</ul>
+<link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>]]></content>
+      <categories>
+        <category>吐槽</category>
+      </categories>
+      <tags>
+        <tag>Cloudflare人机验证</tag>
+        <tag>CodeForces土豆服务器</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>1-Markdown学习笔记</title>
     <url>/2026/07/30/1-Markdown%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="Markdown学习笔记"><a href="#Markdown学习笔记" class="headerlink" title="Markdown学习笔记"></a>Markdown学习笔记</h1><p><em>因为Hexo要用Markdown写文章，所以就有了这篇学习笔记</em>  </p>
@@ -45,54 +115,6 @@
       </categories>
       <tags>
         <tag>学习笔记</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>3-代码源C队模拟赛2026-8-2赛后总结</title>
-    <url>/2026/08/02/3-%E4%BB%A3%E7%A0%81%E6%BA%90C%E9%98%9F%E6%A8%A1%E6%8B%9F%E8%B5%9B2026-8-2%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<h1 id="2026-8-2代码源C队模拟赛-3赛后总结"><a href="#2026-8-2代码源C队模拟赛-3赛后总结" class="headerlink" title="2026-8-2代码源C队模拟赛-3赛后总结"></a>2026-8-2代码源C队模拟赛-3赛后总结</h1><p><del><em>别问我标题为什么是C队模拟赛-3</em></del>  </p>
-<h2 id="比赛概述-难点分析："><a href="#比赛概述-难点分析：" class="headerlink" title="比赛概述+难点分析："></a>比赛概述+难点分析：</h2><ol>
-<li>本场比赛共4道题,时长共4小时。</li>
-<li>比赛为OI赛制（比赛中看不到分数和排名）</li>
-<li>T1,T3较简单,</li>
-</ol>
-<h2 id="题目分析"><a href="#题目分析" class="headerlink" title="题目分析"></a>题目分析</h2><h3 id="T1-双面编号牌"><a href="#T1-双面编号牌" class="headerlink" title="T1 双面编号牌"></a>T1 双面编号牌</h3><p><a href="https://newoj.daimayuan.top/p/5298?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：<br>题目条件：  </p>
-<ol>
-<li><em>1&lt;&#x3D;a&lt;&#x3D;n;</em></li>
-<li><em>1&lt;&#x3D;b&lt;&#x3D;m;</em></li>
-<li><em>a+b&#x3D;k*b*gcd(a,b)</em></li>
-</ol>
-<p>首先证明 <em>a</em> 一定是 <em>b</em> 的倍数：<br>证明：<br>因为 <em>a+b&#x3D;k*b*gcd(a,b)</em> , <em>a+b</em>是<em>b*gcd(a,b)</em> 的倍数, <em>a</em> 是 <em>b</em> 的 <em>(gcd(a,b)-1)</em> 倍,又因为 <em>a&gt;&#x3D;1,b&gt;&#x3D;1</em> ,所以 <em>gcd(a,b)-1!&#x3D;0</em> 。<br>因为 <em>a</em> 是 <em>b</em> 的 <em>(gcd(a,b)-1)</em> 倍且 <em>(gcd(a,b)-1)</em> 为自然数,所以 <em>a</em> 一定是 <em>b</em> 的倍数。<br>证明完毕。<br>最后总结出公式： <em>a+b&#x3D;k*b<sup>2</sup></em>,即 <em>(a+b)%(b*b)&#x3D;&#x3D;0</em> ,这道题就迎刃而解了。<br>警告：循环一定要开<em>long long</em>！！！  </p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">long</span> <span class="type">long</span> T,n,m,ans; </span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	ios::<span class="built_in">sync_with_stdio</span>(<span class="number">0</span>); <span class="comment">//快读快写</span></span><br><span class="line">	cin.<span class="built_in">tie</span>(<span class="number">0</span>);</span><br><span class="line">	cin &gt;&gt; T;</span><br><span class="line">	<span class="keyword">while</span>(T--)&#123;</span><br><span class="line">		ans=<span class="number">0</span>;</span><br><span class="line">		cin &gt;&gt; n &gt;&gt; m;</span><br><span class="line">		<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> i=<span class="number">1</span>;i&lt;=m;i++)&#123; <span class="comment">//b</span></span><br><span class="line">			<span class="keyword">for</span>(<span class="type">long</span> <span class="type">long</span> j=i;j&lt;=n;j+=i)&#123; <span class="comment">//a是b的倍数,j+=i</span></span><br><span class="line">				<span class="keyword">if</span>((i+j)%(i*i)==<span class="number">0</span>) ans++; <span class="comment">//利用总结出来的公式</span></span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">		cout &lt;&lt; ans &lt;&lt; <span class="string">&quot;\n&quot;</span>; <span class="comment">//输出</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="T2-矩阵行列交换"><a href="#T2-矩阵行列交换" class="headerlink" title="T2 矩阵行列交换"></a>T2 矩阵行列交换</h3><p><a href="https://newoj.daimayuan.top/p/5299?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：  </p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="T3-石子游戏"><a href="#T3-石子游戏" class="headerlink" title="T3 石子游戏"></a>T3 石子游戏</h3><p><a href="https://newoj.daimayuan.top/p/5300?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：  </p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="T4-二进制砝码组合"><a href="#T4-二进制砝码组合" class="headerlink" title="T4 二进制砝码组合"></a>T4 二进制砝码组合</h3><p><a href="https://newoj.daimayuan.top/p/5301?tid=6a6dd8a13beb8b91ff8fd43b">原题链接</a><br>分析：  </p>
-<figure class="highlight cpp"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-<hr>
-<h3 id="结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为-long-long-开成了-int-遗憾失分。也希望看到这篇文章的读者不要忘了开-long-long！！！"><a href="#结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为-long-long-开成了-int-遗憾失分。也希望看到这篇文章的读者不要忘了开-long-long！！！" class="headerlink" title="结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为 long long 开成了 int ,遗憾失分。也希望看到这篇文章的读者不要忘了开 long long！！！"></a>结语：这是作者换到C队的第一场模拟赛，本来可以拿100分的，因为 <em>long long</em> 开成了 <em>int</em> ,遗憾失分。也希望看到这篇文章的读者不要忘了开 <em>long long</em>！！！</h3><link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>学习</category>
-      </categories>
-      <tags>
-        <tag>赛后总结</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>4-吐槽Cloudflare人机验证和Codeforces服务器炸了的问题</title>
-    <url>/2026/08/03/4-%E5%90%90%E6%A7%BDCloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%92%8CCodeforces%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%82%B8%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>]]></content>
-      <categories>
-        <category>吐槽</category>
-      </categories>
-      <tags>
-        <tag>Cloudflare人机验证</tag>
-        <tag>Codeforces炸了</tag>
       </tags>
   </entry>
   <entry>
