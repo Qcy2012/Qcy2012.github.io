@@ -20,28 +20,25 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"qcy2012.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"post","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"waline","storage":true,"lazyload":false,"nav":null,"activeClass":"waline"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"top_n_per_article":1,"unescape":false,"preload":false,"trigger":"auto"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="先说Cloudflare人机验证你是否在访问某些网站或提交代码时人机验证失败，很崩溃？没关系，我跟你一样讨厌人机验证 有时在比赛或需要时效性的事情中，这件事就变得特别棘手。有时几分钟可以做完的事情，却因为人机验证而卡了几个小时。   Cloudflare人机验证本来的目的Cloudflare人机验证本来的目的是为了防止自动程序、机器人或爬虫入侵网站，保证网站、用户信息的安全。 这么做当然没错，做得">
-<meta property="og:type" content="article">
-<meta property="og:title" content="4-吐槽Cloudflare人机验证和Codeforces服务器炸了的问题">
-<meta property="og:url" content="https://qcy2012.github.io/2026/08/03/4-%E5%90%90%E6%A7%BDCloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%92%8CCodeforces%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%82%B8%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/index.html">
+    <meta property="og:type" content="article">
+<meta property="og:title" content="Qcy&#39;s Blog">
+<meta property="og:url" content="https://qcy2012.github.io/2026/08/29/8-Atcoder-ABC473%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="Qcy&#39;s Blog">
-<meta property="og:description" content="先说Cloudflare人机验证你是否在访问某些网站或提交代码时人机验证失败，很崩溃？没关系，我跟你一样讨厌人机验证 有时在比赛或需要时效性的事情中，这件事就变得特别棘手。有时几分钟可以做完的事情，却因为人机验证而卡了几个小时。   Cloudflare人机验证本来的目的Cloudflare人机验证本来的目的是为了防止自动程序、机器人或爬虫入侵网站，保证网站、用户信息的安全。 这么做当然没错，做得">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-08-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2026-08-05T09:45:23.529Z">
+<meta property="article:published_time" content="2026-08-29T13:17:51.037Z">
+<meta property="article:modified_time" content="2026-08-29T13:17:51.037Z">
 <meta property="article:author" content="Qcy">
-<meta property="article:tag" content="Cloudflare人机验证">
-<meta property="article:tag" content="CodeForces土豆服务器">
+<meta property="article:tag" content="Blog">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://qcy2012.github.io/2026/08/03/4-%E5%90%90%E6%A7%BDCloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%92%8CCodeforces%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%82%B8%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/">
+<link rel="canonical" href="https://qcy2012.github.io/2026/08/29/8-Atcoder-ABC473%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://qcy2012.github.io/2026/08/03/4-%E5%90%90%E6%A7%BDCloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%92%8CCodeforces%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%82%B8%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/","path":"2026/08/03/4-吐槽Cloudflare人机验证和Codeforces服务器炸了的问题/","title":"4-吐槽Cloudflare人机验证和Codeforces服务器炸了的问题"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://qcy2012.github.io/2026/08/29/8-Atcoder-ABC473%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/","path":"2026/08/29/8-Atcoder-ABC473赛后总结/","title":""}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>4-吐槽Cloudflare人机验证和Codeforces服务器炸了的问题 | Qcy's Blog</title>
+<title> | Qcy's Blog</title>
   
 
 
@@ -177,7 +174,7 @@ p.spoiler {
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -190,7 +187,6 @@ p.spoiler {
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%85%88%E8%AF%B4Cloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81"><span class="nav-number">1.</span> <span class="nav-text">先说Cloudflare人机验证</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BD%A0%E6%98%AF%E5%90%A6%E5%9C%A8%E8%AE%BF%E9%97%AE%E6%9F%90%E4%BA%9B%E7%BD%91%E7%AB%99%E6%88%96%E6%8F%90%E4%BA%A4%E4%BB%A3%E7%A0%81%E6%97%B6%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%A4%B1%E8%B4%A5%EF%BC%8C%E5%BE%88%E5%B4%A9%E6%BA%83%EF%BC%9F"><span class="nav-number">1.1.</span> <span class="nav-text">你是否在访问某些网站或提交代码时人机验证失败，很崩溃？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Cloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E6%9C%AC%E6%9D%A5%E7%9A%84%E7%9B%AE%E7%9A%84"><span class="nav-number">1.1.1.</span> <span class="nav-text">Cloudflare人机验证本来的目的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BD%86%E6%98%AF%EF%BC%81"><span class="nav-number">1.1.2.</span> <span class="nav-text">但是！</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%90%90%E6%A7%BD%E5%AE%8C%E4%BA%86%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95%E5%90%97%EF%BC%9F"><span class="nav-number">1.1.3.</span> <span class="nav-text">吐槽完了，有什么解决方法吗？</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%86%8D%E8%AF%B4CodeForces%E7%9A%84%E5%9C%9F%E8%B1%86%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="nav-number">2.</span> <span class="nav-text">再说CodeForces的土豆服务器</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A2%AB%E5%9C%9F%E8%B1%86%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%9B%B0%E6%89%B0%E4%B9%9F%E5%BE%88%E8%AE%A9%E4%BA%BA%E5%B4%A9%E6%BA%83"><span class="nav-number">2.1.</span> <span class="nav-text">被土豆服务器困扰也很让人崩溃</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -251,7 +247,7 @@ p.spoiler {
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://qcy2012.github.io/2026/08/03/4-%E5%90%90%E6%A7%BDCloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%92%8CCodeforces%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%82%B8%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/">
+    <link itemprop="mainEntityOfPage" href="https://qcy2012.github.io/2026/08/29/8-Atcoder-ABC473%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -264,12 +260,12 @@ p.spoiler {
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="4-吐槽Cloudflare人机验证和Codeforces服务器炸了的问题 | Qcy's Blog">
+      <meta itemprop="name" content=" | Qcy's Blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          4-吐槽Cloudflare人机验证和Codeforces服务器炸了的问题
+          
         </h1>
 
         <div class="post-meta-container">
@@ -280,23 +276,7 @@ p.spoiler {
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2026-08-03 00:00:00" itemprop="dateCreated datePublished" datetime="2026-08-03T00:00:00+08:00">2026-08-03</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-05 17:45:23" itemprop="dateModified" datetime="2026-08-05T17:45:23+08:00">2026-08-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E5%90%90%E6%A7%BD/" itemprop="url" rel="index"><span itemprop="name">吐槽</span></a>
-        </span>
+      <time title="创建时间：2026-08-29 21:17:51" itemprop="dateCreated datePublished" datetime="2026-08-29T21:17:51+08:00">2026-08-29</time>
     </span>
 
   
@@ -308,8 +288,8 @@ p.spoiler {
     </span>
     <span class="post-meta-item-text">Waline：</span>
   
-    <a title="waline" href="/2026/08/03/4-%E5%90%90%E6%A7%BDCloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%92%8CCodeforces%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%82%B8%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/#waline" itemprop="discussionUrl">
-      <span class="post-comments-count waline-comment-count" data-path="/2026/08/03/4-%E5%90%90%E6%A7%BDCloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%92%8CCodeforces%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%82%B8%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/" itemprop="commentCount"></span>
+    <a title="waline" href="/2026/08/29/8-Atcoder-ABC473%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/#waline" itemprop="discussionUrl">
+      <span class="post-comments-count waline-comment-count" data-path="/2026/08/29/8-Atcoder-ABC473%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -320,7 +300,7 @@ p.spoiler {
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>769</span>
+      <span>0</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -337,29 +317,7 @@ p.spoiler {
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="先说Cloudflare人机验证"><a href="#先说Cloudflare人机验证" class="headerlink" title="先说Cloudflare人机验证"></a>先说Cloudflare人机验证</h1><h2 id="你是否在访问某些网站或提交代码时人机验证失败，很崩溃？"><a href="#你是否在访问某些网站或提交代码时人机验证失败，很崩溃？" class="headerlink" title="你是否在访问某些网站或提交代码时人机验证失败，很崩溃？"></a>你是否在访问某些网站或提交代码时人机验证失败，很崩溃？</h2><p><del><em>没关系，我跟你一样讨厌人机验证</em></del></p>
-<p>有时在比赛或需要时效性的事情中，这件事就变得特别棘手。有时几分钟可以做完的事情，却因为人机验证而卡了几个小时。  </p>
-<h3 id="Cloudflare人机验证本来的目的"><a href="#Cloudflare人机验证本来的目的" class="headerlink" title="Cloudflare人机验证本来的目的"></a>Cloudflare人机验证本来的目的</h3><p>Cloudflare人机验证本来的目的是为了防止自动程序、机器人或爬虫入侵网站，保证网站、用户信息的安全。</p>
-<p>这么做当然没错，做得好我还会称赞。</p>
-<h3 id="但是！"><a href="#但是！" class="headerlink" title="但是！"></a>但是！</h3><p>现在的情况好像正好相反：不停循环验证还失败，不知道有没有保证安全，反正用户体验是拉爆了。</p>
-<p>作者亲身经历：2026-8-4晚上作者提交CodeForces的题目，在人机验证阶段卡了一个半小时。</p>
-<h3 id="吐槽完了，有什么解决方法吗？"><a href="#吐槽完了，有什么解决方法吗？" class="headerlink" title="吐槽完了，有什么解决方法吗？"></a>吐槽完了，有什么解决方法吗？</h3><p>有还是有的。</p>
-<p><small><small>注：以下部分结果来源于网络，信息可能不准确，仅供参考</small></small></p>
-<ul>
-<li>换个网络：可以连接手机热点，或其他网络，保证网络信号好</li>
-<li>休息一下，不要太频繁地操作，这让容易让人机验证机制将你判定为人机或自动程序。</li>
-<li>检查浏览器兼容性并清除缓存或重启浏览器，浏览器运行时间过长可能产生很多缓存，影响浏览器和设备性能。</li>
-<li>清除DNS解析缓存:<br>  打开 <em>Windows PowerShell</em> ,输入以下命令并回车执行：  <figure class="highlight cmd"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">ipconfig</span> /flushdns</span><br></pre></td></tr></table></figure></li>
-<li>同步系统时间：<br>  按 <em>Win+I</em> 快捷键打开 <em>Windows 设置</em> ,找到 <em>时间和语言-&gt;日期和时间-&gt;其他设置-&gt;立即同步</em> ,点击右侧 <em>立即同步</em> 按钮,等待同步完成。如果同步失败,多试几次。</li>
-</ul>
-<hr>
-<h1 id="再说CodeForces的土豆服务器"><a href="#再说CodeForces的土豆服务器" class="headerlink" title="再说CodeForces的土豆服务器"></a>再说CodeForces的土豆服务器</h1><h2 id="被土豆服务器困扰也很让人崩溃"><a href="#被土豆服务器困扰也很让人崩溃" class="headerlink" title="被土豆服务器困扰也很让人崩溃"></a>被土豆服务器困扰也很让人崩溃</h2><p><del><em>感觉服务器像土豆地雷，你只知道它会炸，但永远不知道它什么时候会炸</em></del></p>
-<p>土豆服务器爆炸日志：</p>
-<ul>
-<li>2026-8-2 13:00 左右，整个网站炸掉了，主页也进不去</li>
-<li>2026-8-4 20:30 评测机爆炸了，提交上去一直是In queue，到 2026-8-5 8:30 左右才好</li>
-</ul>
-<link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>
+    <div class="post-body" itemprop="articleBody"><link rel="stylesheet" href="/css/folder.css" type="text/css"><script src="/js/folder.js" type="text/javascript" async></script>
     </div>
 
     
@@ -367,23 +325,16 @@ p.spoiler {
     
 
     <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/Cloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81/" rel="tag"># Cloudflare人机验证</a>
-              <a href="/tags/CodeForces%E5%9C%9F%E8%B1%86%E6%9C%8D%E5%8A%A1%E5%99%A8/" rel="tag"># CodeForces土豆服务器</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2026/08/02/3-%E4%BB%A3%E7%A0%81%E6%BA%90C%E9%98%9F%E6%A8%A1%E6%8B%9F%E8%B5%9B2026-8-2%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/" rel="prev" title="3-代码源C队模拟赛2026-8-2赛后总结">
-                  <i class="fa fa-angle-left"></i> 3-代码源C队模拟赛2026-8-2赛后总结
+                <a href="/2026/08/27/7-%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2/" rel="prev" title="7-如何搭建自己的博客">
+                  <i class="fa fa-angle-left"></i> 7-如何搭建自己的博客
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2026/08/04/5-Hexo%E6%8A%98%E5%8F%A0%E6%A1%86%E6%B5%8B%E8%AF%95/" rel="next" title="5-Hexo折叠框测试">
-                  5-Hexo折叠框测试 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -448,7 +399,7 @@ p.spoiler {
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
-<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"comment.qcyblog.dpdns.org","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"欢迎评论~","avatar":"mm","meta":["nick","mail","link"],"pageSize":5,"visitor":false,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2026/08/03/4-%E5%90%90%E6%A7%BDCloudflare%E4%BA%BA%E6%9C%BA%E9%AA%8C%E8%AF%81%E5%92%8CCodeforces%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%82%B8%E4%BA%86%E7%9A%84%E9%97%AE%E9%A2%98/"}</script>
+<script class="next-config" data-name="waline" type="application/json">{"lang":"zh-cn","enable":true,"serverURL":"comment.qcyblog.dpdns.org","cssUrl":"https://unpkg.com/@waline/client@v2/dist/waline.css","commentCount":true,"pageview":false,"placeholder":"欢迎评论~","avatar":"mm","meta":["nick","mail","link"],"pageSize":5,"visitor":false,"comment_count":true,"requiredFields":[],"libUrl":"//unpkg.com/@waline/client@v2/dist/waline.js","el":"#waline","comment":true,"path":"/2026/08/29/8-Atcoder-ABC473%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93/"}</script>
 <link rel="stylesheet" href="https://unpkg.com/@waline/client@v2/dist/waline.css">
 <script>
 document.addEventListener('page:loaded', () => {
